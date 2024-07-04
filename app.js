@@ -8,3 +8,7 @@ const app = express();
 
 // Define the port number to listen on, using the environment variable or defaulting to 3000
 const PORT = process.env.PORT || 3000;
+
+// Middleware to parse incoming JSON requests and URL-encoded data
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
