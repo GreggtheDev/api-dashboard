@@ -1,5 +1,13 @@
 // Import the required modules
 const express = require('express');
+const cors=require("cors");
+const corsOptions ={
+   origin:'*', 
+   credentials:true,            //access-control-allow-credentials:true
+   optionSuccessStatus:200,
+}
+
+app.use(cors(corsOptions))
 const axios = require('axios');
 const path = require('path');
 
