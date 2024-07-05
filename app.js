@@ -40,7 +40,6 @@ app.post('/weather', async (req, res) => {
     }
 });
 
-// Start the server and listen on the defined port
 app.listen(port, () => {
     console.log(`Server running on http://localhost:${port}`);
 });

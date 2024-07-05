@@ -4,17 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard</title>
-    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> <!-- Include Chart.js -->
 </head>
 <body>
     <div class="container">
         <h1>Weather Dashboard</h1>
-        <form id="weather-form"> <!-- Form to input city name -->
-            <input type="text" id="city" name="city" placeholder="Enter city name" required> <!-- Input for city name -->
-            <button type="submit">Get Weather</button> <!-- Button to submit the form -->
+        <form id="weather-form">
+            <input type="text" id="city" name="city" placeholder="Enter city name" required>
+            <input type="date" id="start-date" name="start-date" placeholder="Start Date" required>
+            <input type="date" id="end-date" name="end-date" placeholder="End Date" required>
+            <button type="submit">Get Weather</button>
         </form>
-        <div id="weather-result"></div> <!-- Div to display the weather result -->
+        <div id="weather-result"></div>
+        <canvas id="weather-chart" width="400" height="200"></canvas> <!-- Chart container -->
     </div>
-    <script src="script.js"></script> <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
 </body>
 </html>

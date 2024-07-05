@@ -1,63 +1,91 @@
 body {
-    font-family: Arial, sans-serif;
-    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff);
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
     margin: 0;
+    padding: 20px;
+    box-sizing: border-box;
 }
 
 .container {
-    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
-    max-width: 400px;
+    max-width: 500px;
     width: 100%;
+    box-sizing: border-box;
 }
 
 h1 {
-    color: #0072ff; /* Heading color */
+    color: #0072ff;
+    font-size: 24px;
+    margin-bottom: 20px;
 }
 
-input {
-    width: 80%; /* Input field width */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="text"],
+input[type="date"] {
+    width: calc(100% - 20px);
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #0072ff; /* Border color */
-    border-radius: 5px; /* Rounded corners */
+    margin: 5px 0;
+    border: 1px solid #0072ff;
+    border-radius: 5px;
     font-size: 16px;
+    box-sizing: border-box;
 }
 
 button {
     padding: 10px 20px;
     border: none;
-    border-radius: 5px; /* Rounded corners */
-    background-color: #0072ff; /* Button color */
+    border-radius: 5px;
+    background-color: #0072ff;
     color: white;
     font-size: 16px;
-    cursor: pointer; /* Pointer cursor on hover */
+    cursor: pointer;
+    margin-top: 10px;
 }
 
 button:hover {
-    background-color: #005bb5; /* Darker button color on hover */
+    background-color: #005bb5;
 }
 
 #weather-result {
     margin-top: 20px;
-    text-align: left; /* Align text to the left */
+    text-align: left;
 }
 
-@media (max-width: 600px) { /* Responsive design for smaller screens */
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
     .container {
         padding: 15px;
         border-radius: 8px;
     }
 
-    input, button {
-        width: 100%;
-        margin: 5px 0;
+    h1 {
+        font-size: 20px;
+    }
+
+    input[type="text"],
+    input[type="date"] {
+        font-size: 14px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 16px;
     }
 }
