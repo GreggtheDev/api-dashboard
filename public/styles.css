@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #00c6ff, #0072ff); /* Gradient background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* White background with slight transparency */
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow effect */
+    text-align: center;
+    max-width: 400px;
+    width: 100%;
+}
+
+h1 {
+    color: #0072ff; /* Heading color */
+}
+
+input {
+    width: 80%; /* Input field width */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #0072ff; /* Border color */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    background-color: #0072ff; /* Button color */
+    color: white;
+    font-size: 16px;
+    cursor: pointer; /* Pointer cursor on hover */
+}
+
+button:hover {
+    background-color: #005bb5; /* Darker button color on hover */
+}
+
+#weather-result {
+    margin-top: 20px;
+    text-align: left; /* Align text to the left */
+}
+
+@media (max-width: 600px) { /* Responsive design for smaller screens */
+    .container {
+        padding: 15px;
+        border-radius: 8px;
+    }
+
+    input, button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
